@@ -5,10 +5,13 @@ import Contact from './pages/contact/page';
 import Projects from "@/pages/projects/page"
 import About from './pages/about/page';
 import TimeLine from './pages/timeLine/page';
+import ScrollToTop from "@/components/ui/scrollToTop.tsx";
+
 
 function AppRoutes() {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
