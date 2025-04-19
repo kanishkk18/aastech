@@ -20,7 +20,7 @@ const RecentProjects: React.FC = () => {
             {allprojects.slice(0, 4).map((item) => (
               
               <div
-                className="lg:min-h-[32.5rem] hover:border border-blue-950 h-[25rem] p-4 flex flex-col items-center rounded-[20px] justify-center sm:w-96 lg:w-[100%]"
+                className="lg:min-h-[32.5rem] md:hover:border border-blue-950 h-[20rem] md:h-[25rem] md:p-4 flex flex-col items-center rounded-[20px] justify-center sm:w-96 lg:w-[100%]"
                 key={item.id}>
                   
                   <div className="relative p-2 bg-blue-950/50  rounded-[20px] flex items-start h-[70%] justify-center sm:w-96 lg:w-[100%] overflow-hidden mb-6">
@@ -29,7 +29,7 @@ const RecentProjects: React.FC = () => {
                       className="relative w-full shadow-[0px_48px_100px_0px_rgba(17,12,46,0.15)]  h-full overflow-hidden rounded-[10px] p-[2px] lg:rounded-[10px]"
                       
                     >
-                      <img src={item.img} alt="" className="h-full w-full object-cover rounded-[10px]" />
+                      <img src={item.img} alt="" className="h-full w-full object-fill md:object-cover rounded-[10px]" />
                       <BorderBeam size={250} duration={12} delay={9} />
                     </div>
                   </div>
@@ -563,7 +563,7 @@ const RecentProjects: React.FC = () => {
     objectPosition: 'center',
     objectFit: 'cover'
   }}/></div></div></div></a></div></div></div> */}
-   <div className="flex flex-col justify-center items-center w-full">
+   <div className="flex flex-col justify-center items-center mt-8 md:mt-0 w-full">
               <a href="/projects" className="px-4 py-2 bg-gradient-to-r from-[#262626] to-[#292929] text-white font-extrabold rounded-[10px]">View All Projects</a>
             </div>
        </section>
