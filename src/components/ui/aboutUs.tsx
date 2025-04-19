@@ -37,43 +37,50 @@ const HeroSection = () => {
             </Link>
           </div>
           
-          <div className="grid md:grid-cols-2 grid-cols-1 md:mx-0  mx-auto gap-4 pt-8">
+          <div className="grid md:flex md:flex-wrap grid-cols-1 md:mx-0  mx-auto gap-4 pt-4">
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-full overflow-hidden">
+              <div className="h-10 w-10 rounded-full overflow-hidden">
                 <img 
-                  src="https://randomuser.me/api/portraits/men/32.jpg" 
+                  src="https://res.cloudinary.com/dna3hwzre/image/upload/v1744588507/479499552_18050220845128383_4627433091083380717_n_dck1kx.jpg" 
                   alt="Ryan Matthews" 
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className='flex flex-col'>
                 <span className="font-semibold text-white">Sumit Nautiyal</span>
-                <span className="text-gray-400 text-sm">Co-Founder</span>
+                <span className="text-gray-400 text-sm">CEO</span>
               </div>
-              <div className="ml-2">
-                <div className="h-6 w-6 bg-black rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">X</span>
-                </div>
-              </div>
+             
             </div>
             
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-full overflow-hidden">
+              <div className="h-10 w-10 rounded-full overflow-hidden">
                 <img 
-                  src="https://randomuser.me/api/portraits/men/44.jpg" 
+                  src="https://media-del1-2.cdn.whatsapp.net/v/t61.24694-24/473412855_993376778862353_2441851371015594477_n.jpg?ccb=11-4&oh=01_Q5Aa1QEYDtjNOi4YqkbM1hcfYUYLPx1G-kyooDEudQwqGMvA3Q&oe=68055C7D&_nc_sid=5e03e0&_nc_cat=102" 
                   alt="David Parker" 
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className='flex flex-col'>
                 <span className="font-semibold pb-0.5 text-white">Ashwani Kaushik</span>
-                <span className="text-gray-400 text-sm">Co-Founder</span>
+                <span className="text-gray-400 text-sm">CTO</span>
               </div>
-              <div className="ml-2">
-                <div className="h-6 w-6 bg-black rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">X</span>
-                </div>
+             
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="h-10 w-10 rounded-full overflow-hidden">
+                <img 
+                  src="https://media-del1-1.cdn.whatsapp.net/v/t61.24694-24/487021445_1301418911161492_1432720301756424006_n.jpg?ccb=11-4&oh=01_Q5Aa1QFzZBpkDR8GGBrnSrn0aG7CrJ7FUiwsskYya4E_HTNp_Q&oe=68065005&_nc_sid=5e03e0&_nc_cat=111" 
+                  alt="Ryan Matthews" 
+                  className="h-full w-full object-cover"
+                />
               </div>
+              <div className='flex flex-col'>
+                <span className="font-semibold text-white">Aryan Singh</span>
+                <span className="text-gray-400 text-sm">CFO</span>
+              </div>
+             
             </div>
           </div>
         </div>
