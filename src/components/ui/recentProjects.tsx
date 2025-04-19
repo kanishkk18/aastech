@@ -1,5 +1,8 @@
 import React from 'react';
 import { Badge } from './badge';
+import { allprojects } from "@/data/index";
+import { BorderBeam } from "../magicui/border-beam";
+import { Button } from "./button";
 
 const RecentProjects: React.FC = () => {
     return (
@@ -10,11 +13,48 @@ const RecentProjects: React.FC = () => {
             <Badge className='z-50 px-8 py-2 rounded-full'>Works</Badge>
                 <span className='md:text-3xl text-2xl font-bold z-50'> Explore Our Recent Projects</span>
                 <span className='md:text-lg max-w-lg font-sans z-50'>Browse through our portfolio showcasing diverse, innovative web design projects and client successes.</span>
-                {/* <img className="absolute mix-blend-color" src="https://framerusercontent.com/images/IJB1pgcBugatOTAc7yAHhqLQu0.svg" alt="" /> */}
+                {/* <img className="absolute " src="https://framerusercontent.com/images/IJB1pgcBugatOTAc7yAHhqLQu0.svg" alt="" /> */}
             </div>
           </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 px-5 md:py-10 md:px-20 lg:py-10 lg:px-20 gap-10 place-items-center h-full ">
+            {allprojects.slice(0, 4).map((item) => (
+              
+              <div
+                className="lg:min-h-[32.5rem] hover:border border-blue-950 h-[25rem] p-4 flex flex-col items-center rounded-[20px] justify-center sm:w-96 lg:w-[100%]"
+                key={item.id}>
+                  
+                  <div className="relative p-2 bg-blue-950/50  rounded-[20px] flex items-start h-[70%] justify-center sm:w-96 lg:w-[100%] overflow-hidden mb-6">
+                      
+                    <div
+                      className="relative w-full shadow-[0px_48px_100px_0px_rgba(17,12,46,0.15)]  h-full overflow-hidden rounded-[10px] p-[2px] lg:rounded-[10px]"
+                      
+                    >
+                      <img src={item.img} alt="" className="h-full w-full object-cover rounded-[10px]" />
+                      <BorderBeam size={250} duration={12} delay={9} />
+                    </div>
+                  </div>
+                  <div className="">
+                     <a href={item.link}> <Button className="px-4 py-2 bg-gradient-to-r from-[#3793FF] to-[#0017E4] text-white font-extrabold rounded-[10px]">{item.button}</Button></a> 
+                      <span
+                    className="lg:text-xl lg:font-normal font-light pt-2 text-xs line-clamp-2"
+                    style={{
+                      color: "#BEC1DD",
+                      margin: "1vh 0",
+                    }}
+                  >
+                    {item.des}
+                  </span>
+                    </div>
+                    
+              </div>
+              
+            ))}
 
-  <div className="framer-cxa8ey" data-framer-name="Sub Container"><div className="framer-1yw09mo"><div className="ssr-variant "><div className="framer-uod2mi-container"><a className="framer-6FHZ7 framer-25to6 framer-1bn9f6p framer-v-1bn9f6p framer-v16us7" data-border="true" style={{
+           
+            
+          </div>
+
+  {/* <div className="framer-cxa8ey" data-framer-name="Sub Container"><div className="framer-1yw09mo"><div className="ssr-variant "><div className="framer-uod2mi-container"><a className="framer-6FHZ7 framer-25to6 framer-1bn9f6p framer-v-1bn9f6p framer-v16us7" data-border="true" style={{
     
     background: 'linear-gradient(rgb(10, 12, 30) 0%, rgba(10, 12, 30, 0.98) 0.01%, rgba(10, 13, 31, 0) 72.3613%)',
     borderRadius: '24px',
@@ -48,10 +88,10 @@ const RecentProjects: React.FC = () => {
         <img decoding="async" loading="lazy" sizes="calc(max((min(min(100vw * 0.9, 1260px), 1080px) - 30px) / 2, 50px) - 32px)" srcSet="https://res.cloudinary.com/dna3hwzre/image/upload/v1744296280/aas/v600atlwatkxtpvhrbuw.png" src="https://res.cloudinary.com/dna3hwzre/image/upload/v1744296280/aas/v600atlwatkxtpvhrbuw.png" alt=""  style={{
     display: 'block',
     width: '100%',
-    height: '100%',
+    height: '90%',
     borderRadius: 'inherit',
     objectPosition: 'center',
-    objectFit: 'cover'
+    objectFit: 'fill'
   }}/></div><div className="framer-105l3my" data-framer-name="Overlay" style={{
   backgroundColor: 'rgba(10, 12, 30, 0)',
   opacity: 1
@@ -403,10 +443,10 @@ const RecentProjects: React.FC = () => {
 }}  data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" sizes="calc(max((min(min(100vw * 0.9, 1260px), 1080px) - 30px) / 2, 50px) - 32px)" srcSet="https://res.cloudinary.com/kanishkkcloud18/image/upload/v1739098246/Kanishkk/m8kw2ovcqnm3u5a90ecq.png 512w,https://res.cloudinary.com/kanishkkcloud18/image/upload/v1739098246/Kanishkk/m8kw2ovcqnm3u5a90ecq.png" alt="Work Card Thumbnail"  style={{
     display: 'block',
     width: '100%',
-    height: '100%',
+    height: '70%',
     borderRadius: 'inherit',
     objectPosition: 'center',
-    objectFit: 'cover'
+    objectFit: 'fill'
   }}/></div>
   <div className="framer-105l3my" data-framer-name="Overlay" style={{
   backgroundColor: 'rgba(10, 12, 30, 0)',
@@ -440,10 +480,10 @@ const RecentProjects: React.FC = () => {
 }}  data-framer-background-image-wrapper="true"><img decoding="async" loading="lazy" src="https://framerusercontent.com/images/JVubb761C9SkQ9jmM5kLP0TztQ.svg" alt=""  style={{
     display: 'block',
     width: '100%',
-    height: '100%',
+    height: '90%',
     borderRadius: 'inherit',
     objectPosition: 'center',
-    objectFit: 'cover'
+    objectFit: 'fill'
   }}/></div></div></div></div>
   <div className="framer-1okfzfw" data-framer-name="Container" style={{ opacity: 1 }}><div className="framer-i3f3td" data-framer-name="Content" style={{ opacity: 1 }}>
     <div className="bg-white p-2 text-black font-bold font-sans rounded-3xl" data-framer-name="Sub Container" style={{ opacity: 1 }}><div className="framer-1byqzwh" data-framer-name="Heading" style={{
@@ -522,7 +562,10 @@ const RecentProjects: React.FC = () => {
     borderRadius: 'inherit',
     objectPosition: 'center',
     objectFit: 'cover'
-  }}/></div></div></div></a></div></div></div>
+  }}/></div></div></div></a></div></div></div> */}
+   <div className="flex flex-col justify-center items-center w-full">
+              <a href="/projects" className="px-4 py-2 bg-gradient-to-r from-[#262626] to-[#292929] text-white font-extrabold rounded-[10px]">View All Projects</a>
+            </div>
        </section>
     );
 };
